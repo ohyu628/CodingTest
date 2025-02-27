@@ -1,10 +1,10 @@
 -- 코드를 입력하세요
-# 
+# 날짜타입으로 실행
 SELECT COUNT(*) AS USERS
 FROM USER_INFO
 WHERE YEAR(JOINED) = 2021 AND AGE BETWEEN 20 and 29;
 
-# JOINED가 날짜타입인데 LIKE로 진행할 경우 암시적문자로 형변환되어 실행
+# LIKE를 사용해 암시적 형변환되어 문자타입으로 실행
 SELECT COUNT(*) AS USERS
 FROM USER_INFO
 WHERE JOINED LIKE '2021%' AND AGE BETWEEN 20 and 29;
