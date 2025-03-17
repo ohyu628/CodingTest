@@ -1,4 +1,5 @@
 -- 코드를 입력하세요
+# WHERE문에 집계함수 사용하려면 서브쿼리로 사용해야 함
 SELECT *
 FROM FOOD_PRODUCT
 WHERE PRICE = (SELECT MAX(PRICE) FROM FOOD_PRODUCT);
