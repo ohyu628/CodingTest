@@ -1,3 +1,4 @@
+# 방법 1
 S = input()
 
 total = 0
@@ -18,4 +19,16 @@ for i in S:
         total += 2+7
     elif i in ['W', 'X', 'Y', 'Z']:
         total += 2+8
+print(total)
+
+# 방법 2
+S = input()
+
+total = 0
+dial = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+
+for i in range(len(S)):
+    for j in dial:
+        if S[i] in j:
+            total += dial.index(j) + 3
 print(total)
