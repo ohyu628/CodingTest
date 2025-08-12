@@ -1,3 +1,5 @@
+# 방법 1
+# 델타 사용
 T = int(input())
 
 # 상, 하, 좌, 우
@@ -26,3 +28,29 @@ for tc in range(1, T+1):
             if max_v < count:
                 max_v = count
     print(f'#{tc} {max_v}')
+
+# 방법 2
+T = int(input())
+
+for tc in range(1, T+1):
+    N = int(input())
+    balloon = [list(map(int, input().split())) for _ in range(N)]
+
+    max_v = 0
+
+    for R in range(N):
+        for C in range(N):
+            count = -balloon[R][C]
+
+            # 행의 합 구하기
+            for c in range(N):
+                count += balloon[R][c]
+            # 열의 합 구하기
+            for r in range(N):
+                count += balloon[r][C]
+            
+            # 최대값 업데이트
+            if count > max_v:
+                max_v = count
+    
+    print(f"#{tc} {max_v}")
