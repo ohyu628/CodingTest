@@ -1,5 +1,4 @@
 # 방법 1
-# 델타 사용
 T = int(input())
 
 for tc in range(1, T+1):
