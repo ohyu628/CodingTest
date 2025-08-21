@@ -1,3 +1,4 @@
+# 덱 사용
 from collections import deque
 
 for tc in range(1, 11):
