@@ -19,7 +19,6 @@ for tc in range(1, T+1):
     arr = list(map(int, input().split()))
 
     path = []
-    visited = [0] * N
     result = 1e9
 
     top(0)
