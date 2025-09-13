@@ -4,9 +4,13 @@ def recur(r, total, cnt):
     if cnt == N:
         result = min(result, total + arr[r][0])
         return
+
+    # 가지치기
+    if total >= result:
+        return
     
     for c in range(N):
-        if visited[j]:
+        if visited[c]:
             continue
         visited[c] = 1
         recur(c, total + arr[r][c], cnt + 1)
@@ -26,7 +30,7 @@ for tc in range(1, T+1):
     recur(0, 0, 1)
         
     print(f'#{tc} {result}')
-
+    
 # 방법 2
 def recur(r, c, total):
     global result
