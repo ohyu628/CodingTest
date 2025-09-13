@@ -1,4 +1,37 @@
-# 하, 우
+# 방법 1
+dr = [1, 0]
+dc = [0, 1]
+
+def dfs(r, c, total):
+    global result
+    if r == N-1 and c == N-1:
+        result = min(result, total)
+        return
+
+    # 가치지기 
+    if total >= result:
+        return
+    
+    for d in range(2):
+        nr = r + dr[d]
+        nc = c + dc[d]
+
+        if 0 <= nr < N and 0 <= nc < N:
+            dfs(nr, nc, total + arr[nr][nc])
+
+T = int(input())
+
+for tc in range(1, T+1):
+    N = int(input())
+    arr = [list(map(int, input().split())) for _ in range(N)]
+
+    result = 1e9
+    dfs(0, 0, arr[0][0])
+
+    print(f'#{tc} {result}')
+
+
+# 방법 2 - 방문처리(아래와 우측만 확인해서 필요없음)
 dr = [1, 0]
 dc = [0, 1]
 
