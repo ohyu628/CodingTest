@@ -13,7 +13,6 @@ def dfs(r, c):
             visited[nr][nc] = 0
             if arr[nr][nc] == 3:
                 answer = 1
-                return
 
 for tc in range(1, 11):
     input()
