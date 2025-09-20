@@ -1,4 +1,4 @@
-# bfs
+# BFS
 from collections import deque
 
 computer = int(input())
@@ -30,7 +30,7 @@ while q:
 print(count)
 
 
-# dfs
+# DFS
 def dfs(idx):
     global count
     for i in adj_list[idx]:
@@ -57,4 +57,5 @@ dfs(1)
 
 
 print(count)
+
 
