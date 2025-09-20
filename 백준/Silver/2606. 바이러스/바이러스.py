@@ -1,4 +1,4 @@
-# bs
+# bfs
 from collections import deque
 
 computer = int(input())
@@ -57,3 +57,4 @@ dfs(1)
 
 
 print(count)
+
