@@ -37,7 +37,6 @@ for tc in range(T):
     print(count)
         
 
-
 # DFS
 # 재귀 1000 호출 제한 1000000으로 늘려줌
 import sys
@@ -76,3 +75,4 @@ for tc in range(T):
                 dfs(i, j)
 
     print(count)
+
