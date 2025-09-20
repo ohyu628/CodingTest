@@ -28,6 +28,7 @@ for i in range(N):
 
 print(count)
 
+
 # 반복문 방식
 N, M = map(int, input().split())
 arr = [list(input()) for _ in range(N)]
@@ -49,3 +50,4 @@ for j in range(M):
         pre_v = arr[i][j]
 
 print(count)
+
